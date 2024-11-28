@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-black">
+        <h1 id="title class=" heading1">DOM learning</h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem, ipsum dolor.</h2>
+        <p1>Lorem ipsum dolor sit amet.</p1>
+
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+    </div>
+    <script>
+        document.querySelector("h2") //first h2 will give you
+
+        document.querySelector("#title")
+
+        document.querySelector(".heading")
+        document.querySelector('input[type="password"]')
+        document.querySelector('ul')
+        const myul = document.querySelector('ul')
+        myul.querySelector('li')
+        const turngreen = myul.querySelector('li')
+
+        turngreen.style.backgroundColor = "green"
+
+        turngreen.innerText = "hello"
+//
+        document.querySelectorAll('li')
+
+        const templislist = document.querySelectorAll('li')
+        templislist[0].style.color = "yellow"//for node list
+
+        templislist.forEach(function (li) {
+            li.style.backgroundColor = "red"
+        })
+//
+        document.getElementsByClassName("list-item")
+        const tempclasslist = document.getElementsByClassName("list-item")
+        tempclasslist//this will show you htmlcollection
+
+        Array.from(tempclasslist)
+
+        const myconvertedarray = Array.from(tempclasslist)
+
+        myconvertedarray.forEach(function (li) {
+            li.style.color = 'orange'
+        })
+    </script>
+</body>
+
+</html>
