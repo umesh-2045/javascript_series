@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: black; color: white;">
+    <h2>Amazing images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/20189671/pexels-photo-20189671/free-photo-of-flowers-around-logo-board-near-building-wall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/2187605/pexels-ph…jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="river"
+                    src="https://images.pexels.com/photos/133682/pexels-photo-133682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li><img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/1906157/pexels-photo-1906157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt=""></li>
+            <li style="color: blue;"><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    // document.getElementById('owl').onclick = function () {
+    //     alert("owl")
+    // }  this gives you less features
+
+    // attachEvent()
+    // jQuery - onevent 
+
+    // type, timestamp, defaultprevented
+    //target,toelement,sourceelement,cuurenttarget
+    //clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    document.getElementById('images').addEventListener('click', function (e) {
+        console.log("clicked inside the ul");
+    }, false)
+    document.getElementById('owl').addEventListener('click', function (e) {
+        console.log("oel clicked");
+        e.stopPropagation()
+    }, false)
+    // false means bubbling event, true means capturing event 
+
+    document.getElementById('google').addEventListener('click', (e) => {
+        e.preventDefault()
+    })
+
+    document.querySelector('#images').addEventListener('click', (e) => {
+        // unstop, devfolio 
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            let removeIt = e.target.parentNode
+            // removeIt.remove()
+            removeIt.parentNode.removeChild(removeIt)
+        }
+
+    })
+
+
+</script>
+
+</html>
