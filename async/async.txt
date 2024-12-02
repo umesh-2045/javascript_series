@@ -1,0 +1,17 @@
+javascript
+
+it is synchronous
+
+single thread
+
+//execution context //
+
+executes line by line code at a time 
+
+each operation waits for the last one to complete before executing
+
+blocking code vs non blocking code
+//blocking code//
+block the flow of program
+// non blocking code//
+does not block execution
